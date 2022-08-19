@@ -6,7 +6,7 @@ pipeline {
     		label 'jenkins-agent'
 		}
             steps {
-		git branch: 'main', url: 'https://github.com/mangesh16cloud/Portfolio-website.git'
+		git branch: 'main', url: 'https://github.com/arsh-ash/Portfolio-website.git'
 		stash 'source'
 		echo 'stash successful'
             }
@@ -15,8 +15,8 @@ pipeline {
         stage('build') {
 	    
             steps {
-		            unstash 'source'
-                echo 'builds perform here'
+		unstash 'source'
+                echo 'Hello World'
             }
         }
     }
